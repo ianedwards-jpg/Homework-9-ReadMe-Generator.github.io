@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const axios= require("axios")
-
+const fs = require("fs")
 
 //Questions Array for README input
 const questions = [
@@ -11,10 +11,6 @@ const questions = [
       {
         name: 'Description',
         message: 'What is your project about? What does it do? What are you hoping to accomplish with it?',
-      },
-      {
-        name: 'Table of Contents',
-        message: '',
       },
       {
         name: 'Installation',
@@ -37,7 +33,8 @@ const questions = [
         message: 'What kind of tests did you run?',
       },
     ]
-inquirer.prompt(questions).then(answers => {
+
+    inquirer.prompt(questions).then(answers => {
         console.info('Answer:', answers);
       })
       .catch(error => {
@@ -51,10 +48,13 @@ inquirer.prompt(questions).then(answers => {
 
 
 function writeToFile(fileName, answers) {
+
 }
 
 function init() {
 
+
+writeToFile()
 }
 
 init();
