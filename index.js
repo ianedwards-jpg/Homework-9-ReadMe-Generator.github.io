@@ -5,31 +5,31 @@ const fs = require("fs")
 //Questions Array for README input
 const questions = [
     {
-        name: 'Title',
+        name: 'title',
         message: 'Give your project a name.',
       },
       {
-        name: 'Description',
+        name: 'description',
         message: 'What is your project about? What does it do? What are you hoping to accomplish with it?',
       },
       {
-        name: 'Installation',
+        name: 'installation',
         message: 'Describe the installation process for your project. List any modules that will need to be installed for it to run.',
       },
       {
-        name: 'Usage',
+        name: 'usage',
         message: 'Provide instructions for the usage of your project. Include pictures as needed.',
       },
       {
-        name: 'License',
+        name: 'license',
         message: 'Describe what your project may and may not be used for. Include any special permissions that must be sought.',
       },
       {
-        name: 'Contributing',
+        name: 'contributing',
         message: 'If you wish for others to build on your project, include instructions on accessing the project and guidelines for contribution.',
       },
       {
-        name: 'Tests',
+        name: 'tests',
         message: 'What kind of tests did you run?',
       },
     ]

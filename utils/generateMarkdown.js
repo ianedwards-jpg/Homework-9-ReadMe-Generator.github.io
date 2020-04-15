@@ -1,6 +1,14 @@
-function generateMarkdown(data) {
+require('./index.js')()
+
+function generateMarkdown(answers) {
   return `
-# ${data.title}
+# ${answers.title}
+# ${answers.description}
+# ${answers.installation}
+# ${answers.usage}
+# ${answers.license}
+# ${answers.contributing}
+# ${answers.tests}
 
 `;
 }
