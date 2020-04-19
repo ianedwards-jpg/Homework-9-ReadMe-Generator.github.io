@@ -36,6 +36,8 @@ const questions = [
 
     inquirer.prompt(questions).then(answers => {
         console.info('Answer:', answers);
+        const data = json.stringify(answers)
+        module.exports = data;
       })
       .catch(error => {
         if(error.isTtyError) {
@@ -47,8 +49,18 @@ const questions = [
 
 
 
-function writeToFile(fileName, answers) {
 
+function writeToFile(fileName, data) {
+    
+    fs.writeFile("answerData.json", data, function(err) {
+
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Success!");
+      
+      });
 }
 
 function init() {

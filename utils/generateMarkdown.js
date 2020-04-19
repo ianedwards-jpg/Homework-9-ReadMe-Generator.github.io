@@ -1,4 +1,7 @@
 require('./index.js')()
+require ('./api.js')
+module.imports = api
+module.imports = data
 
 function generateMarkdown(answers) {
   return `
