@@ -34,19 +34,7 @@ const questions = [
       },
     ]
 
-    inquirer.prompt(questions).then(answers => {
-        console.info('Answer:', answers);
-        const data = json.stringify(answers)
-        module.exports = data;
-      })
-      .catch(error => {
-        if(error.isTtyError) {
-          // Prompt couldn't be rendered in the current environment
-        } else {
-          // Something else when wrong
-        }
-      });
-
+    
 
 
 
@@ -64,9 +52,18 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-
-
-writeToFile()
+  inquirer.prompt(questions).then(answers => {
+    console.info('Answer:', answers);
+    const data = json.stringify(answers)
+    writeToFile("answerData.md",answers)
+  })
+  .catch(error => {
+    if(error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else when wrong
+    }
+  });
 }
 
 init();
