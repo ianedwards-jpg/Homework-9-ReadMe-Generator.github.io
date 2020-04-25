@@ -1,11 +1,7 @@
-require('./index.js')()
-require ('./api.js')
-module.imports = api
-module.imports = data
-
 function generateMarkdown(answers) {
   return `
 # ${answers.title}
+# ${answers.userName}
 # ${answers.description}
 # ${answers.installation}
 # ${answers.usage}
